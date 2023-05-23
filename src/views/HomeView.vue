@@ -4,7 +4,7 @@
       <img src="@/assets/4990224.jpg" alt="" class="imgg" />
     </div> -->
     <div class="home flex items-center justify-center w-5/6 mx-auto">
-      <div class="w-1/2 p-14">
+      <div class="w-1/2 p-14" @click="RedirectDisease()">
         <img src="@/assets/1586349622virus.svg" alt="" />
         <h1
           class="font-bold tracking-wide font-mono subpixel-antialiased ml-10 mt-8"
@@ -23,7 +23,10 @@
           Human Information
         </h1>
       </div>
-      <div class="w-1/2 p-14 flex items-center justify-center flex-col">
+      <div
+        class="w-1/2 p-14 flex items-center justify-center flex-col"
+        @click="RedirectMicro()"
+      >
         <img src="@/assets/3855249.jpg" alt="" class="rounded-full" />
         <h1
           class="font-bold tracking-wide font-mono subpixel-antialiased ml-2 mt-4"
@@ -41,6 +44,12 @@ export default {
   methods: {
     RedirectHuman() {
       this.$router.push("dash");
+    },
+    RedirectDisease() {
+      this.$router.push("disease");
+    },
+    RedirectMicro() {
+      this.$router.push("microbiome");
     },
     redirctlogin() {
       this.$router.push("login");

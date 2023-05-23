@@ -25,15 +25,6 @@
         <div class="link-container">Delete</div>
       </router-link>
       <router-link
-        to="/profile"
-        active-class="active"
-        tag="button"
-        exact
-        class="side-btn"
-      >
-        <div class="link-container">Update</div>
-      </router-link>
-      <router-link
         to="/creat"
         active-class="active"
         tag="button"
@@ -41,6 +32,15 @@
         class="side-btn"
       >
         <div class="link-container">Create</div>
+      </router-link>
+      <router-link
+        to="/creatmh"
+        active-class="active"
+        tag="button"
+        exact
+        class="side-btn"
+      >
+        <div class="link-container">Create Many</div>
       </router-link>
     </div>
   </div>

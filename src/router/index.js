@@ -3,6 +3,10 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import HumanInfo from "../views/HumanInfo.vue";
 import dashboard from "../views/DashboardApp.vue";
+import disease from "../views/DiseaseApp.vue";
+import microbiome from "../views/MicroApp.vue";
+import team from "../views/TeamApp.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -10,6 +14,16 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/home",
+    name: "home",
+    component: HomeView,
+  },
+  {
+    path: "/team",
+    name: "team",
+    component: team,
   },
   {
     path: "/human",
@@ -34,16 +48,90 @@ const routes = [
           import(/* webpackChunkName: "Messages" */ "../views/DeleteApp.vue"),
       },
       {
-        path: "/profile",
-        name: "profile",
+        path: "/update",
+        name: "update",
         component: () =>
-          import(/* webpackChunkName: "Profile" */ "../views/ProfileApp.vue"),
+          import(/* webpackChunkName: "Profile" */ "../views/UpdateHuman.vue"),
+      },
+      {
+        path: "/creatmh",
+        name: "creatmh",
+        component: () =>
+          import(
+            /* webpackChunkName: "Settings" */ "../views/CreatManyhuman.vue"
+          ),
       },
       {
         path: "/creat",
         name: "creat",
         component: () =>
           import(/* webpackChunkName: "Settings" */ "../views/CreateApp.vue"),
+      },
+    ],
+  },
+  {
+    path: "/disease",
+    name: "disease",
+    component: disease,
+    children: [
+      {
+        path: "/diseasedata",
+        name: "diseasedata",
+        component: () =>
+          import(/* webpackChunkName: "Overview" */ "../views/DiseaseShow.vue"),
+      },
+      {
+        path: "/deletedisease",
+        name: "deletedisease",
+        component: () =>
+          import(
+            /* webpackChunkName: "Messages" */ "../views/DeletDisease.vue"
+          ),
+      },
+      {
+        path: "/update",
+        name: "update",
+        component: () =>
+          import(/* webpackChunkName: "Profile" */ "../views/UpdateHuman.vue"),
+      },
+      {
+        path: "/creatdisease",
+        name: "creatdisease",
+        component: () =>
+          import(
+            /* webpackChunkName: "Settings" */ "../views/CreateDisease.vue"
+          ),
+      },
+    ],
+  },
+  {
+    path: "/microbiome",
+    name: "microbiome",
+    component: microbiome,
+    children: [
+      {
+        path: "/microdata",
+        name: "microdata",
+        component: () =>
+          import(/* webpackChunkName: "Overview" */ "../views/MicroShow.vue"),
+      },
+      {
+        path: "/deletemicro",
+        name: "deletemicro",
+        component: () =>
+          import(/* webpackChunkName: "Messages" */ "../views/DeleteMicro.vue"),
+      },
+      {
+        path: "/profile",
+        name: "profile",
+        component: () =>
+          import(/* webpackChunkName: "Profile" */ "../views/UpdateHuman.vue"),
+      },
+      {
+        path: "/creatmicro",
+        name: "creatmicro",
+        component: () =>
+          import(/* webpackChunkName: "Settings" */ "../views/CreateMicro.vue"),
       },
     ],
   },
