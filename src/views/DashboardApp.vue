@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <Sidebar />
-    <div class="content">
+    <div class="content1">
       <router-view />
     </div>
   </div>
@@ -18,17 +18,19 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 5fr;
   background-color: teal;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw;   */
+  box-sizing: border-box;
 }
 
-.content {
+.content1 {
   background-color: white;
+
   border-radius: 10px;
   margin: 6px 6px 6px 0px;
 }

@@ -16,7 +16,7 @@
         <div class="link-container">Shaw Data</div>
       </router-link>
       <router-link
-        to="/messages"
+        to="/delete"
         active-class="active"
         tag="button"
         exact
@@ -34,7 +34,7 @@
         <div class="link-container">Update</div>
       </router-link>
       <router-link
-        to="/settings"
+        to="/creat"
         active-class="active"
         tag="button"
         exact

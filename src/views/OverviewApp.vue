@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="w-3/4 mx-auto">
+    <div class="w-11/12 mx-auto mt-20">
       <!-- <button
         @click="togglef()"
         class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
@@ -8,21 +8,21 @@
         Show Data
       </button> -->
       <div class="relative flex flex-col">
-        <table class="mt-9">
+        <table class="">
           <thead
             class="text-xs text-gray-900 uppercase dark:text-gray-400 bg-teal-500"
           >
             <tr class="">
-              <th scope="col" class="px-6 py-3">Id</th>
-              <th scope="col" class="px-6 py-3">First_Name</th>
-              <th scope="col" class="px-6 py-3">Last_Name</th>
-              <th scope="col" class="px-6 py-3">email</th>
-              <th scope="col" class="px-6 py-3">gender</th>
-              <th scope="col" class="px-6 py-3">ip_addr</th>
+              <th scope="col" class="pl-10 py-3">HMP_ID</th>
+              <th scope="col" class="pl-6 py-3">GOLD_ID</th>
+              <th scope="col" class="w-72 px-6 py-3">Organism_Name</th>
+              <th scope="col" class="pl-24 py-3">Domain</th>
+              <th scope="col" class="pl-6 py-3 ml-20">NCBI_Superkingdom</th>
+              <th scope="col" class="px-6 py-3">HMP_Isolation_Body_Site</th>
             </tr>
           </thead>
         </table>
-        <div class="overflow-y-auto h-screen">
+        <div class="overflow-y-auto h-96">
           <table
             class="w-full text-sm text-left text-gray-500 dark:text-gray-400 bg-red-500"
           >
@@ -32,14 +32,17 @@
                 v-for="g in gens"
                 :key="g.id"
               >
-                <th
+                <!-- <th
                   scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  class="pl-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
                   {{ g.HMP_ID }}
-                </th>
-                <td class="px-6 py-4">{{ g.GOLD_ID }}</td>
-                <td class="px-6 py-4">{{ g.Organism_Name }}</td>
+                </th> -->
+                <!-- <td class="py-4">{{ g.HMP_ID }}</td> -->
+                <td class="pl-6 w-2 py-4">{{ g.HMP_ID }}</td>
+
+                <td class="py-4">{{ g.GOLD_ID }}</td>
+                <td class="px-6 py-4 w-80">{{ g.Organism_Name }}</td>
                 <td class="px-6 py-4">{{ g.Domain }}</td>
                 <td class="px-6 py-4">{{ g.NCBI_Superkingdom }}</td>
                 <td class="px-6 py-4">{{ g.HMP_Isolation_Body_Site }}</td>

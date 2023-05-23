@@ -57,7 +57,7 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener("scroll", this.updateScroll);
+    // window.addEventListener("scroll", this.updateScroll);
   },
 
   // components: { TheLogout },

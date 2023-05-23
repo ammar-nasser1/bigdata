@@ -28,10 +28,10 @@ const routes = [
           import(/* webpackChunkName: "Overview" */ "../views/OverviewApp.vue"),
       },
       {
-        path: "/messages",
-        name: "messages",
+        path: "/delete",
+        name: "delete",
         component: () =>
-          import(/* webpackChunkName: "Messages" */ "../views/MessagesApp.vue"),
+          import(/* webpackChunkName: "Messages" */ "../views/DeleteApp.vue"),
       },
       {
         path: "/profile",
@@ -40,10 +40,10 @@ const routes = [
           import(/* webpackChunkName: "Profile" */ "../views/ProfileApp.vue"),
       },
       {
-        path: "/settings",
-        name: "settings",
+        path: "/creat",
+        name: "creat",
         component: () =>
-          import(/* webpackChunkName: "Settings" */ "../views/SettingsApp.vue"),
+          import(/* webpackChunkName: "Settings" */ "../views/CreateApp.vue"),
       },
     ],
   },
